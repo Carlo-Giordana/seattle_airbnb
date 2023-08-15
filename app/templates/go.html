@@ -1,0 +1,14 @@
+{% extends "master.html" %}
+{% block title %}Results{% endblock %}
+
+{% block message %}
+    <hr />
+    <h4 class="text-center">Description</h4>
+    <p class="text-center"><i>{{query}}</i></p>
+{% endblock %}
+
+{% block content %}
+    <h1 class="text-center">Predicted Rating</h1>
+    <h1 class="text-center">{{ predicted_rating }}%</h1>
+
+{% endblock %}
