@@ -41,16 +41,18 @@
                 <p class="text"></p>
                 <form action="/go" method="get">
 
+                    <!-----DESCRIPTION----->
                     <div class="form-group row">
                         <label for="description" class="col-sm-2 col-form-label">
                             Which is the description of your listing?
                         </label>
                         <div class="col-sm-10">
-                          <input type="text" class="form-control" id="description"
+                          <input type="text" class="form-control" id="description" name="description" value=""
                                  placeholder="Enter here the description of your listing">
                         </div>
                     </div>
 
+                    <!-----SUPERHOST----->
                     <fieldset class="form-group">
                         <div class="row">
                           <label for="guests" class="col-sm-2 col-form-label">
@@ -58,13 +60,13 @@
                           </label>
                           <div class="col-sm-10">
                             <div class="form-check">
-                              <input class="form-check-input" type="radio" name="superhost" id="superhost1" value="option1" checked>
+                              <input class="form-check-input" type="radio" name="superhost" id="superhost1" value="1" checked>
                               <label class="form-check-label" for="superhost1">
                                 Yes
                               </label>
                             </div>
                             <div class="form-check">
-                              <input class="form-check-input" type="radio" name="superhost" id="superhost2" value="option2">
+                              <input class="form-check-input" type="radio" name="superhost" id="superhost2" value="0">
                               <label class="form-check-label" for="superhost2">
                                 No
                               </label>
@@ -73,12 +75,198 @@
                         </div>
                     </fieldset>
 
+                    <!-----RESPONSE WITHIN AN HOUR----->
+                    <fieldset class="form-group">
+                        <div class="row">
+                          <label for="guests" class="col-sm-2 col-form-label">
+                              Can you answer to your guests' requests within an hour?
+                          </label>
+                          <div class="col-sm-10">
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="responsehour" id="responsehour1" value="1" checked>
+                              <label class="form-check-label" for="responsehour1">
+                                Yes
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="responsehour" id="responsehour2" value="0">
+                              <label class="form-check-label" for="responsehour2">
+                                No
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                    </fieldset>
+
+                    <!-----IDENTITY VERIFIED----->
+                    <fieldset class="form-group">
+                        <div class="row">
+                          <label for="guests" class="col-sm-2 col-form-label">
+                              Is you host identity verified?
+                          </label>
+                          <div class="col-sm-10">
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="identity" id="identity1" value="1" checked>
+                              <label class="form-check-label" for="identity1">
+                                Yes
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="identity" id="identity2" value="0">
+                              <label class="form-check-label" for="identity2">
+                                No
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                    </fieldset>
+
+                    <!-----RESPONSE WITHIN A DAY---->
+                    <fieldset class="form-group">
+                        <div class="row">
+                          <label for="guests" class="col-sm-2 col-form-label">
+                              Can you answer to your guests' requests within a day?
+                          </label>
+                          <div class="col-sm-10">
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="responseday" id="responseday1" value="1" checked>
+                              <label class="form-check-label" for="responseday1">
+                                Yes
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="responseday" id="responseday2" value="0">
+                              <label class="form-check-label" for="responseday2">
+                                No
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                    </fieldset>
+
+                    <!-----INSTANT BOOKABLE----->
+                    <fieldset class="form-group">
+                        <div class="row">
+                          <label for="guests" class="col-sm-2 col-form-label">
+                              Is you accommodation instantly bookable?
+                          </label>
+                          <div class="col-sm-10">
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="instantbook" id="instantbook1" value="1" checked>
+                              <label class="form-check-label" for="instantbook1">
+                                Yes
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="instantbook" id="instantbook2" value="0">
+                              <label class="form-check-label" for="instantbook2">
+                                No
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                    </fieldset>
+
+                    <!-----CANCELLATION FLEXIBLE----->
+                    <fieldset class="form-group">
+                        <div class="row">
+                          <label for="guests" class="col-sm-2 col-form-label">
+                              Is your cancellation policy flexible?
+                          </label>
+                          <div class="col-sm-10">
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="cancflex" id="cancflex1" value="1" checked>
+                              <label class="form-check-label" for="cancflex1">
+                                Yes
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="cancflex" id="cancflex2" value="0">
+                              <label class="form-check-label" for="cancflex2">
+                                No
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                    </fieldset>
+
+                     <!-----PRIVATE ROOM----->
+                    <fieldset class="form-group">
+                        <div class="row">
+                          <label for="guests" class="col-sm-2 col-form-label">
+                              Is your accommodation a private room?
+                          </label>
+                          <div class="col-sm-10">
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="privateroom" id="privateroom1" value="1" checked>
+                              <label class="form-check-label" for="privateroom1">
+                                Yes
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="privateroom" id="privateroom2" value="0">
+                              <label class="form-check-label" for="privateroom2">
+                                No
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                    </fieldset>
+
+                    <!-----PROPERTY HOUSE----->
+                    <fieldset class="form-group">
+                        <div class="row">
+                          <label for="guests" class="col-sm-2 col-form-label">
+                              Is your property a house?
+                          </label>
+                          <div class="col-sm-10">
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="propertyhouse" id="propertyhouse1" value="1" checked>
+                              <label class="form-check-label" for="propertyhouse1">
+                                Yes
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="propertyhouse" id="propertyhouse2" value="0">
+                              <label class="form-check-label" for="propertyhouse2">
+                                No
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                    </fieldset>
+
+                    <!-----GUESTS----->
                     <div class="form-group row">
                         <label for="guests" class="col-sm-2 col-form-label">How many guests are included?</label>
                         <div class="col-sm-10">
-                          <input type="number" class="form-control" id="guests" placeholder="Number of guests included">
+                          <input type="number" min="0" class="form-control" id="guests" name="guests" value=""
+                                 placeholder="Number of guests included">
                         </div>
                     </div>
+
+                    <!-----CANCELLATION STRICT----->
+                    <fieldset class="form-group">
+                        <div class="row">
+                          <label for="guests" class="col-sm-2 col-form-label">
+                              Is your cancellation policy strict?
+                          </label>
+                          <div class="col-sm-10">
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="cancstrict" id="cancstrict1" value="1" checked>
+                              <label class="form-check-label" for="cancstrict1">
+                                Yes
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="cancstrict" id="cancstrict2" value="0">
+                              <label class="form-check-label" for="cancstrict2">
+                                No
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                    </fieldset>
 
                     <div class="form-group row">
                         <div class="col-sm-10">
@@ -95,7 +283,7 @@
     </div>
 </div>
 
-<div class="container">
+<!--div class="container">
     {% block content %}
         <div class="page-header">
             <h1 class="text-center">Overview of Training Dataset</h1>
@@ -105,7 +293,7 @@
     {% for id in ids %}
         <div id="{{id}}"></div>
     {% endfor %}
-</div>
+</div-->
 
 <script type="text/javascript">
     const graphs = {{graphJSON | safe}};

@@ -85,7 +85,7 @@ def index():
                 },
                 'xaxis': {
                     'title': "Category",
-                    'automargin' : 'TRUE'
+                    'automargin': 'TRUE'
                 },
                 'margin': {
                     'b': 200
@@ -107,20 +107,28 @@ def index():
 def go():
     # save user input in query
     description = request.args.get('description', '')
-    superhost = request.args.get('superhost', '')
-    guests = request.args.get('guests', '')
+    superhost = request.args.get('superhost', 0)
+    responsehour = request.args.get('responsehour', 0)
+    identity = request.args.get('identity', 0)
+    responseday = request.args.get('responseday', 0)
+    instantbook = request.args.get('instantbook', 0)
+    cancflex = request.args.get('cancflex', 0)
+    privateroom = request.args.get('privateroom', 0)
+    propertyhouse = request.args.get('propertyhouse', 0)
+    guests = request.args.get('guests', 0)
+    cancstrict = request.args.get('cancstrict', 0)
     row = [
         description,
-        1,
-        1,
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        1,
-        1
+        superhost,
+        responsehour,
+        identity,
+        responseday,
+        instantbook,
+        cancflex,
+        privateroom,
+        propertyhouse,
+        guests,
+        cancstrict
     ]
     X_columns = df.drop('review_scores_rating', axis=1).columns
     X_new = pd.DataFrame([row], columns=X_columns, index=[0])
@@ -132,6 +140,7 @@ def go():
     return render_template(
         'go.html',
         description=description,
+        guests=guests,
         predicted_rating=np.round(predicted_rating, 2)
     )
 
